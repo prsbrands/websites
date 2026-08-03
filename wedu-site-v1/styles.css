@@ -1,0 +1,27 @@
+:root{
+  --color-navy:#1e2160;
+  --color-navy-soft:#c6d2e6;
+  --color-red:#c62035;
+  --color-red-dark:#a5182a;
+  --color-cream:#f6f4ee;
+  --color-ink:#17140f;
+  --color-ink-soft:#57503f;
+  --color-muted:#8a8178;
+  --color-border:rgba(30,33,96,.12);
+  --font-serif:'Fraunces',serif;
+  --font-sans:'Hanken Grotesk',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--color-cream);color:var(--color-ink);font-family:var(--font-sans);font-weight:300;-webkit-font-smoothing:antialiased}
+a{color:var(--color-navy);text-decoration:none}
+a:hover{color:var(--color-red)}
+input,select,textarea{font-family:inherit}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--color-navy)!important;box-shadow:0 0 0 3px rgba(30,33,96,.12)}
+@keyframes riseIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+/* Decorative floating-logo filler in the "Available programs" grid — only relevant once the
+   auto-fit grid actually has a spare cell after the 5th card; below this width cards stack and
+   there's no gap left to fill. */
+@media (max-width:999px){
+  [data-w2c-fill]{display:none}
+}
